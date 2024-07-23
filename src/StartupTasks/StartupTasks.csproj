@@ -16,6 +16,8 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<RootNamespace>ChrisMavrommatis.StartupTasks</RootNamespace>
 		<RepositoryType>git</RepositoryType>
+		<Description>A library that enables you to define and execute a set of tasks during the startup phase of your ASP.NET Core application, just before the web host begins running.</Description>
+		<PackageTags>ASP.NET Core;Startup Tasks;Dependency Injection;Initialization</PackageTags>
 
 	</PropertyGroup>
 
