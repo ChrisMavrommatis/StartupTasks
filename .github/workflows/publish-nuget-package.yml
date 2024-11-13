@@ -5,9 +5,8 @@ on:
     types: [ "published" ]
 
 jobs:
-  publish:
+  build_and_publish:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -15,16 +14,19 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: '9.0.x'
 
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+      - name: Build .Net 8.0
+        run: dotnet build --configuration Release --no-restore --framework net8.0
+
+      - name: Build .Net 9.0
+        run: dotnet build --configuration Release --no-restore --framework net9.0
 
       - name: Pack
-        run: dotnet pack --configuration Release --no-build --output ./nupkgs
+        run: dotnet pack  --configuration Release --no-build --output ./nupkgs
 
       - name: Publish to NuGet
         env:
