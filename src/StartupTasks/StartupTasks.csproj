@@ -10,7 +10,8 @@
 		<Authors>Chris Mavrommatis</Authors>
 		<PackageProjectUrl>https://github.com/ChrisMavrommatis/StartupTasks</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/ChrisMavrommatis/StartupTasks</RepositoryUrl>
-		<Version>2.0.1</Version>
+		<Version>2.0.2</Version>
+		<PackageIcon>package-icon.png</PackageIcon>
 		<AssemblyName>ChrisMavrommatis.StartupTasks</AssemblyName>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -24,6 +25,7 @@
 	<ItemGroup>
 		<None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\package-icon.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup >
